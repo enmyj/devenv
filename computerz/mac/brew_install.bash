@@ -1,7 +1,3 @@
-# Software that can't be installed with Homebrew:
-# Microsoft Office (has a brew install but seems dubious)
-# Logitech Options
-# Xcode
 
 # install homebrew if not already installed
 if [[ $(which brew) ]]; then 

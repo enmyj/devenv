@@ -1,0 +1,15 @@
+Software that can't be installed with Homebrew:
+Microsoft Office (has a brew install but seems dubious)
+Logitech Options
+Xcode
+
+Random Software settings:
+Mac - Change scroll direction to the good way (not inverse like a n00b)
+Mac - Show full date in menu bar
+Alfred override CMD+Space hotkey instead of spotlight
+iterm - skip words with option+arrow (potentially a default setting now?)
+
+Fish/Iterm2 shell setup Instructions:
+https://lobster1234.github.io/2017/04/08/setting-up-fish-and-iterm2/
+https://codeyarns.com/2014/02/27/how-to-create-alias-in-fish/
+https://blog.devopscomplete.com/fishing-with-bob-the-fish-2decd3a2f8
