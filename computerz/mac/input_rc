@@ -1,0 +1,8 @@
+# https://apple.stackexchange.com/questions/136928/using-alt-cmd-right-left-arrow-in-iterm
+"\e\e[D": backward-word
+"\e\e[C": forward-word
+
+# http://osxdaily.com/2012/08/02/improve-tab-completion-in-mac-os-x-terminal/
+set completion-ignore-case on
+set show-all-if-ambiguous on
+TAB: menu-complete

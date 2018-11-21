@@ -1,0 +1,6 @@
+
+Random Software settings:
+Mac - Change scroll direction to the good way (not inverse like a n00b)
+Mac - Show full date in menu bar
+Alfred override CMD+Space hotkey instead of spotlight
+iterm - skip words with option+arrow (potentially a default setting now?)

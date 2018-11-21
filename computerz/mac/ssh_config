@@ -1,0 +1,6 @@
+Host *
+	User ian.myjer
+	ForwardAgent yes
+	UseKeychain yes
+	LogLevel QUIET
+	ServerAliveInterval 60
