@@ -1,0 +1,51 @@
+cask_args appdir: "/Applications"
+tap "homebrew/cask"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "microsoft/mssql-preview"
+tap "microsoft/mssql-release"
+
+cask "firefox"
+cask "google-chrome"
+cask "spectacle"
+cask "slack"
+cask "flux"
+cask "karabiner-elements"
+cask "alfred" # still requires authentication
+cask "adobe-acrobat-reader"
+cask "skype"
+cask "vlc"
+cask "keybase"
+cask "safeincloud-password-manager"
+cask "microsoft-office" # seems dubious
+
+# brew cask install dev tools
+cask "iterm2" # hacker shit
+cask "docker" # whales
+cask "visual-studio-code" # the best editor
+cask "atom" # github editor
+cask "dbeaver-community" # open source sql front end
+cask "anaconda" # not sure what python version this installs?
+cask "google-cloud-sdk" # corporate shit
+
+# brew normal installs
+brew "git"
+brew "fish"
+brew "bash-git-prompt"
+brew "openssl"
+brew "awscli"
+brew "bash-completion"
+brew "unixodbc"
+brew "freetds", args: ["with-unixodbc"]
+brew "jenv"
+brew "maven"
+brew "mysql", restart_service: true
+brew "postgresql"
+brew "rabbitmq"
+brew "vim"
+brew "wget"
+brew "microsoft/mssql-release/msodbcsql17"
+brew "microsoft/mssql-release/mssql-tools"
