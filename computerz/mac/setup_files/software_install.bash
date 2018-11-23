@@ -10,8 +10,8 @@ fi;
 brew bundle --file=~/Brewfile
 
 # Anaconda installation
-# first 3 steps can also be performed using homebrew except everyting will be installed
-# at this location: /usr/local/anaconda3/bin
+# first 3 steps can also be performed using homebrew, but this is untested 
+# and not listed anywhere obvious in documentation
 wget https://repo.continuum.io/archive/Anaconda3-5.3.1-MacOSX-x86_64.sh
 bash ~/Anaconda3-5.3.1-MacOSX-x86_64.sh -b -p ~/anaconda3
 rm ~/Anaconda3-5.3.1-MacOSX-x86_64.sh

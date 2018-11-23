@@ -28,6 +28,7 @@ cask "visual-studio-code" # the best editor
 cask "atom" # github editor
 cask "dbeaver-community" # open source sql front end
 cask "google-cloud-sdk" # corporate shit
+# cask "anaconda", args: { appdir: "/anaconda3" }
 
 # brew normal installs
 brew "git"
