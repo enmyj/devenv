@@ -5,6 +5,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "homebrew/science"
 tap "microsoft/mssql-preview"
 tap "microsoft/mssql-release"
 
@@ -29,6 +30,7 @@ cask "atom" # github editor
 cask "dbeaver-community" # open source sql front end
 cask "google-cloud-sdk" # corporate shit
 # cask "anaconda", args: { appdir: "/anaconda3" }
+cask "rstudio"
 
 # brew normal installs
 brew "git"
@@ -48,3 +50,4 @@ brew "postgresql"
 brew "rabbitmq"
 brew "microsoft/mssql-release/msodbcsql17"
 brew "microsoft/mssql-release/mssql-tools"
+brew "r"

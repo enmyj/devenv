@@ -1,0 +1,24 @@
+
+# non-dev tools
+firefox
+google chrome
+slack
+flux
+adobe acrobat reader
+skype
+vlc
+keybase
+safeincloud password manager
+Microsoft Office
+
+# dev tools
+docker # whales
+visual studio code # the best editor
+atom # github editor
+dbeaver community # open source sql front end
+google cloud sdk # corporate shit
+R
+Rstudio
+Git Bash
+aws cli
+anaconda
