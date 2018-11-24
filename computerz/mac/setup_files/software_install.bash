@@ -1,3 +1,7 @@
+# "Automated Mac Setup Script"
+# Installs homebrew if not already installed
+# Uses homebrew to install a bunch of software/packages
+# installs Anaconda and appends required things to relevant config files
 
 # install homebrew if not already installed
 if [[ $(which brew) ]]; then 
@@ -16,7 +20,7 @@ wget https://repo.continuum.io/archive/Anaconda3-5.3.1-MacOSX-x86_64.sh
 bash ~/Anaconda3-5.3.1-MacOSX-x86_64.sh -b -p ~/anaconda3
 rm ~/Anaconda3-5.3.1-MacOSX-x86_64.sh
 echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bash_profile # for using conda from command line
-echo '. /anaconda3/etc/profile.d/conda.sh' >> ~/.bash_profile # for using conda environments
+echo 'source /anaconda3/etc/profile.d/conda.sh' >> ~/.bash_profile # for using conda environments
 source ~/.bash_profile
 conda update --all
 

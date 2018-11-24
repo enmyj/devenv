@@ -1,0 +1,8 @@
+channels:
+  - defaults
+  - conda-forge
+  - R
+ssl_verify: true
+create_default_packages:
+  - pip
+  - jupyter

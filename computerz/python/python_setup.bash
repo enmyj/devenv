@@ -1,15 +1,7 @@
-conda create -n work \
-python=3.6 \
-scikit-learn \
-pandas \
-numpy \
-matplotlib \
-seaborn \
-jupyter \
-jupyterlab \
-sqlalchemy \
-requests \
-regex \
-kaggle
+"""
+Create an anaconda environment called 'work'
+using an environment.yml file
+"""
 
+conda env create -f environment.yml
 conda activate work
