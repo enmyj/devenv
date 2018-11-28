@@ -17,7 +17,7 @@ brew bundle --file=~/Brewfile
 # first 3 steps can also be performed using homebrew, but this is untested 
 # and not listed anywhere obvious in documentation
 wget -P ~/ https://repo.continuum.io/archive/Anaconda3-5.3.1-MacOSX-x86_64.sh
-bash ~/Anaconda3-5.3.1-MacOSX-x86_64.sh -b -p /anaconda3
+sudo bash ~/Anaconda3-5.3.1-MacOSX-x86_64.sh -b -p /anaconda3
 rm ~/Anaconda3-5.3.1-MacOSX-x86_64.sh
 echo 'export PATH="/anaconda3/bin:$PATH"' >> ~/.bash_profile # for using conda from command line
 echo 'source /anaconda3/etc/profile.d/conda.sh' >> ~/.bash_profile # for using conda environments
