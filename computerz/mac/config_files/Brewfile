@@ -21,6 +21,7 @@ cask "skype"
 cask "vlc"
 cask "keybase"
 cask "safeincloud-password-manager"
+cask "box-sync"
 
 # brew cask install dev tools
 cask "iterm2" # hacker shit
