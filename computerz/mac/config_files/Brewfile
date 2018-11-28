@@ -33,6 +33,7 @@ cask "google-cloud-sdk" # corporate shit
 # cask "anaconda", args: { appdir: "/anaconda3" }
 cask "rstudio"
 cask "java8"
+cask "java"
 
 # brew normal installs
 brew "git"
@@ -52,4 +53,5 @@ brew "postgresql"
 brew "rabbitmq"
 brew "microsoft/mssql-release/msodbcsql17"
 brew "microsoft/mssql-release/mssql-tools"
+brew "libgit2"
 brew "r"

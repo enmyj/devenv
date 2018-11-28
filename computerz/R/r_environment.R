@@ -6,4 +6,6 @@ install.packages(c(
     "zoo",
     "lubridate",
     "ODBC",
-    "sqldf"))
+    "sqldf",
+    "devtools"), 
+    r, repos="http://cran.us.r-project.org")
