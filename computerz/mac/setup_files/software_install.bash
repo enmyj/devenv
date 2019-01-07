@@ -16,11 +16,9 @@ brew bundle --file=~/Brewfile
 # Anaconda installation
 # first 3 steps can also be performed using homebrew, but this is untested 
 # and not listed anywhere obvious in documentation
-wget -P ~/ https://repo.continuum.io/archive/Anaconda3-5.3.1-MacOSX-x86_64.sh
-sudo bash ~/Anaconda3-5.3.1-MacOSX-x86_64.sh -b -p /anaconda3
-rm ~/Anaconda3-5.3.1-MacOSX-x86_64.sh
-echo 'export PATH="/anaconda3/bin:$PATH"' >> ~/.bash_profile # for using conda from command line
-echo 'source /anaconda3/etc/profile.d/conda.sh' >> ~/.bash_profile # for using conda environments
+touch ~/.bash_profile
+echo 'export PATH="/usr/local/anaconda3/bin:$PATH"' >> ~/.bash_profile # for using conda from command line
+echo 'source /usr/local/anaconda3/etc/profile.d/conda.sh' >> ~/.bash_profile # for using conda environments
 source ~/.bash_profile
 conda update --all
 
