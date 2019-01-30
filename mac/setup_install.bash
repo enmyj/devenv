@@ -1,6 +1,7 @@
 # "Automated Mac Setup Script"
 
 # copy dotfiles to appropriate places (and create any necessary directories)
+echo "$(cat mac/dotfiles/.hushlogin)" >> ~/.hushlogin
 echo "$(cat mac/dotfiles/.vimrc)" >> ~/.vimrc
 echo "$(cat mac/dotfiles/.bash_profile)" >> ~/.bash_profile
 echo "$(cat mac/dotfiles/.inputrc)" >> ~/.inputrc
