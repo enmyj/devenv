@@ -8,7 +8,7 @@ export CLICOLOR=1
 
 # required to use conda commands
 # assumes conda is instlled at /anaconda3
-export PATH="/anaconda3/bin:$PATH"
+export PATH="/usr/local/anaconda3/bin:$PATH"
 
 # required for using "conda activate"
-. /anaconda3/etc/profile.d/conda.sh
+source /usr/local/anaconda3/etc/profile.d/conda.sh
