@@ -37,6 +37,7 @@ chsh -s 'which fish'
 # install oh my fish
 curl -L https://get.oh-my.fish | fish
 
-# set theme to toaster (lol)
-omf install toaster
-omf theme toaster
+# set theme to bira
+omf install bira
+omf theme bira
+

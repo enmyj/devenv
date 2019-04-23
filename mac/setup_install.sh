@@ -20,5 +20,16 @@ fi;
 # brew install things specified in the Brewfile
 brew bundle --file=~/.brewfile
 
-# source the bash profile
+# source the bash profile, just for fun
 source ~/.bash_profile
+
+# switch to fish shell as default
+chsh -s 'which fish'
+
+# install oh my fish
+curl -L https://get.oh-my.fish | fish
+
+# set theme to bira
+omf install bira
+omf theme bira
+
