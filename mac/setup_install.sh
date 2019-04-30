@@ -32,4 +32,3 @@ curl -L https://get.oh-my.fish | fish
 # set theme to bira
 omf install bira
 omf theme bira
-

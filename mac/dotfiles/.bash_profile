@@ -7,7 +7,7 @@ fi
 export CLICOLOR=1
 
 # required to use conda commands
-# assumes conda is instlled at /anaconda3
+# assumes conda is installed at /usr/local/anaconda3
 export PATH="/usr/local/anaconda3/bin:$PATH"
 
 # required for using "conda activate"

@@ -10,8 +10,5 @@ function repos
     cd ~/repos
 end
 
-# required to use conda from command line
-set -U fish_user_paths ~/usr/local/anaconda3/bin/ $fish_user_paths
-
 # required in order to use "conda activate"
 source /usr/local/anaconda3/etc/fish/conf.d/conda.fish
