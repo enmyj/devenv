@@ -34,6 +34,8 @@ sudo apt-get install -y code # or code-insiders
 # switch to fish shell as default
 chsh -s 'which fish'
 
+set -Ux EDITOR vim
+
 # install oh my fish
 curl -L https://get.oh-my.fish | fish
 
