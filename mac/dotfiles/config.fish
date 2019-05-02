@@ -12,3 +12,4 @@ end
 
 # required in order to use "conda activate"
 source /usr/local/anaconda3/etc/fish/conf.d/conda.fish
+conda activate base
