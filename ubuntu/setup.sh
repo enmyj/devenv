@@ -7,7 +7,8 @@ apt install -y \
     rofi \
     spotify-client \
     gdebi \ 
-    fish
+    fish \
+    htop
 
 # install hyper from website
 wget -P ~/Downloads https://hyper-updates.now.sh/download/linux_deb
