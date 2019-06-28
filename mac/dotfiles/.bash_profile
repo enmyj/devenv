@@ -12,3 +12,4 @@ export PATH="/usr/local/anaconda3/bin:$PATH"
 
 # required for using "conda activate"
 source /usr/local/anaconda3/etc/profile.d/conda.sh
+conda activate base

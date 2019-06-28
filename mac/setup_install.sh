@@ -1,3 +1,7 @@
+#!/bin/bash
+set -e
+set -o pipefail
+
 # "Automated Mac Setup Script"
 
 # copy dotfiles to appropriate places (and create any necessary directories)
@@ -24,11 +28,8 @@ brew bundle --file=~/.brewfile
 source ~/.bash_profile
 
 # switch to fish shell as default
-chsh -s 'which fish'
+echo $(which fish) >> /etc/shells
+chsh -s `which fish`
 
 # install oh my fish
 curl -L https://get.oh-my.fish | fish
-
-# set theme to bira
-omf install bira
-omf theme bira

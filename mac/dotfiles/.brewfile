@@ -22,6 +22,7 @@ cask "box-drive"
 
 # brew cask install dev tools
 cask "iterm2" # hacker shit
+cask "hyper"
 cask "docker" # whales
 cask "visual-studio-code" # the best editor
 cask "atom" # github editor
@@ -29,8 +30,7 @@ cask "dbeaver-community" # open source sql front end
 cask "google-cloud-sdk" # corporate shit
 cask "anaconda"
 cask "rstudio"
-cask "java8"
-cask "java"
+cask "java11"
 
 # brew normal installs
 brew "git"
@@ -40,14 +40,9 @@ brew "htop"
 brew "fish"
 brew "bash-git-prompt"
 brew "bash-completion"
-brew "openssl"
 brew "unixodbc"
 brew "awscli"
-brew "freetds", args: ["with-unixodbc"]
-brew "jenv"
-brew "maven"
 brew "mysql", restart_service: true
 brew "postgresql"
-brew "rabbitmq"
 brew "libgit2"
 brew "r"
