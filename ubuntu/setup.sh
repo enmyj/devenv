@@ -1,3 +1,9 @@
+# copy dotfiles to appropriate places (and create any necessary directories)
+cat mac/dotfiles/.hushlogin >> ~/.hushlogin
+cat mac/dotfiles/.vimrc >> ~/.vimrc
+cat mac/dotfiles/.condarc >> ~/.condarc
+mkdir -p ~/.ssh/ && cat mac/dotfiles/.ssh_config >> ~/.ssh/config
+
 # install packages 
 apt update && \
 apt install -y \
@@ -33,14 +39,10 @@ sudo apt-get update
 sudo apt-get install -y code # or code-insiders
 
 # switch to fish shell as default
-chsh -s 'which fish'
+echo $(which fish) >> /etc/shells
+chsh -s `which fish`
 
 set -Ux EDITOR vim
 
 # install oh my fish
 curl -L https://get.oh-my.fish | fish
-
-# set theme to bira
-omf install bira
-omf theme bira
-
