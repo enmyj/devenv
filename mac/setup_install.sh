@@ -12,7 +12,7 @@ cat mac/dotfiles/.inputrc >> ~/.inputrc
 cat mac/dotfiles/.condarc >> ~/.condarc
 cat mac/dotfiles/.brewfile >> ~/.brewfile
 mkdir -p ~/.ssh/ && cat mac/dotfiles/.ssh_config >> ~/.ssh/config
-mkdir -p ~/config/fish/ && cat mac/dotfiles/config.fish >> ~/.config/fish/config.fish
+mkdir -p ~/.config/fish/ && cat mac/dotfiles/config.fish >> ~/.config/fish/config.fish
 
 # Install homebrew if not already installed
 if [[ $(which brew) ]]; then 
