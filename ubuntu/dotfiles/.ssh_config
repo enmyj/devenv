@@ -1,6 +1,0 @@
-Host *
-	User imyjer
-	ForwardAgent yes
-	UseKeychain yes
-	LogLevel QUIET
-	ServerAliveInterval 60
