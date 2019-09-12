@@ -1,12 +1,9 @@
-# copy dotfiles to appropriate places (and create any necessary directories)
-cat mac/dotfiles/.hushlogin >> ~/.hushlogin
-cat mac/dotfiles/.vimrc >> ~/.vimrc
-cat mac/dotfiles/.condarc >> ~/.condarc
-mkdir -p ~/.ssh/ && cat mac/dotfiles/.ssh_config >> ~/.ssh/config
+#!/bin/bash
+set -e
+set -o pipefail
 
-# install packages 
-apt update && \
-apt install -y \
+# install packages using apt
+sudo apt-get update && apt-get install -y \
     git \
     vim \
     chromium-browser \
@@ -14,35 +11,65 @@ apt install -y \
     spotify-client \
     gdebi \ 
     fish \
-    htop
+    htop \
+    snapd
+
+# logout so that snap will work
+sudo gnome-session-quit
+
+# install snap'd applications
+sudo snap install hello-world
+hello-world
+sudo snap install vscode --classic
+sudo snap install atom --classic
+sudo snap install chromium
+sudo snap install spotify
+sudo snap install docker
+sudo snap install signal-desktop
+sudo snap install postman
+sudo snap install google-cloud-sdk --classic
+sudo snap install etcd
+# sudo snap install conda --beta #wtf is this??
+
+# install miniconda from website
+wget -P ~/Downloads https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+sudo bash ~/Downloads/miniconda.sh
+rm ~/Downloads/miniconda.sh
+conda init fish
+
+# install R for Ubuntu 19.04 (disco)
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu disco-cran35/'
+sudo apt-get update && apt-get install -y r-base
+
+# install Rstudio from website (no latest link?!)
+wget -P ~/Downloads https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
+sudo gdebi rstudio-1.2.1335-amd64.deb
+
+# install keybase
+wget -P ~/Downloads https://prerelease.keybase.io/keybase_amd64.deb
+sudo apt install ~/Downloads/keybase_amd64.deb
+run_keybase
 
 # install hyper from website
-wget -P ~/Downloads https://hyper-updates.now.sh/download/linux_deb
+wget -P ~/Downloads https://releases.hyper.is/download/deb
 gdebi ~/Downloads/linux_deb
 rm ~/Downloads/linux_deb
 
-# install miniconda from website
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
-bash ~/miniconda.sh -b -p ~/miniconda 
-rm ~/miniconda.sh
-
-echo "source (conda info --root)/etc/fish/conf.d/conda.fish" >> /home/enmyj/.config/fish
-
-# install vscode (copied from website)
-# https://code.visualstudio.com/docs/setup/linux#_installation
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install -y code # or code-insiders
+# copy dotfiles to appropriate places (and create any necessary directories)
+cat ./dotfiles/.hushlogin > ~/.hushlogin
+cat ./dotfiles/.vimrc > ~/.vimrc
+cat ./dotfiles/.condarc > ~/.condarc
+mkdir -p ~/.ssh/ && cat ./dotfiles/.ssh_config >> ~/.ssh/config
 
 # switch to fish shell as default
-echo $(which fish) >> /etc/shells
-chsh -s `which fish`
-
-set -Ux EDITOR vim
-
-# install oh my fish
+# and install oh my fish
+sudo echo $(which fish) >> /etc/shells
+sudo chsh --shell `which fish` $USER
 curl -L https://get.oh-my.fish | fish
+
+# random fish setup
+# VIM
+# set -Ux EDITOR vim
+# omf install lambda 
+# omf theme lambda
