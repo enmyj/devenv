@@ -32,7 +32,7 @@ sudo snap install etcd
 # sudo snap install conda --beta #wtf is this??
 
 # install miniconda from website
-wget -P ~/Downloads https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/Downloads/miniconda.sh
 sudo bash ~/Downloads/miniconda.sh
 rm ~/Downloads/miniconda.sh
 conda init fish
