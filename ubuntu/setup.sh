@@ -31,9 +31,13 @@ sudo snap install google-cloud-sdk --classic
 sudo snap install etcd
 # sudo snap install conda --beta #wtf is this??
 
-# install miniconda from website
+# install miniconda from website (multi-user for practice)
+sudo addgroup anaconda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/Downloads/miniconda.sh
-sudo bash ~/Downloads/miniconda.sh
+sudo bash ~/Downloads/miniconda.sh # /opt/miniconda3
+sudo chgrp -R anaconda /opt/miniconda3
+sudo chmod 770 -R /opt/miniconda3
+sudo usermod -aG anaconda $USER
 rm ~/Downloads/miniconda.sh
 conda init fish
 
