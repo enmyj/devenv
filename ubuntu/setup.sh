@@ -3,7 +3,7 @@ set -e
 set -o pipefail
 
 # install packages using apt
-sudo apt-get update && apt-get install -y \
+sudo apt-get update && sudo apt-get install -y \
     git \
     vim \
     chromium-browser \
@@ -21,15 +21,12 @@ sudo gnome-session-quit
 sudo snap install hello-world
 hello-world
 sudo snap install vscode --classic
-sudo snap install atom --classic
 sudo snap install chromium
 sudo snap install spotify
 sudo snap install docker
 sudo snap install signal-desktop
 sudo snap install postman
 sudo snap install google-cloud-sdk --classic
-sudo snap install etcd
-# sudo snap install conda --beta #wtf is this??
 
 # install miniconda from website (multi-user for practice)
 sudo addgroup anaconda
