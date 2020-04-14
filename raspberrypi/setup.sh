@@ -53,3 +53,6 @@ docker pull jrcs/letsencrypt-nginx-proxy-companion
 sudo echo $(which fish) >> /etc/shells
 sudo chsh --shell `which fish` $USER
 curl -L https://get.oh-my.fish | fish
+
+# disable wifi
+# https://raspberrypi.stackexchange.com/questions/100543/how-to-disable-wifi-in-raspberry-pi-4/100549#comment166502_100549
