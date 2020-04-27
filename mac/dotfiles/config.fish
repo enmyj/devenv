@@ -5,6 +5,4 @@ set fish_greeting
 alias ll="ls -lha"
 alias repos="cd ~/repos"
 
-# required in order to use "conda activate"
-source /usr/local/anaconda3/etc/fish/conf.d/conda.fish
-conda activate base
+starship init fish | source
