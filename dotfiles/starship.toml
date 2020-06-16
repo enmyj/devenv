@@ -1,5 +1,29 @@
 add_newline=false
 
+[character]
+symbol = "🌮"
+
 [directory]
-truncation_length=5
+truncation_length=3
 truncate_to_repo=false
+
+[username]
+show_always = false
+
+[hostname]
+ssh_only = true
+
+[terraform]
+disabled = true
+
+[python]
+disabled = true
+
+[conda]
+disabled = true
+
+[docker_context]
+disabled = false
+
+[aws]
+disabled=true

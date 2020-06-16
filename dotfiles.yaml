@@ -1,0 +1,49 @@
+vim:
+  repo: "dotfiles/.vimrc"
+  target: "~/.vimrc"
+  platforms:
+    - "Darwin"
+    - "Linux"
+bash_profile:
+  repo: "dotfiles/.bash_profile"
+  target: "~/.bash_profile"
+  platforms:
+    - "Darwin"
+brewfile:
+  repo: "dotfiles/.brewfile"
+  target: "~/.brewfile"
+  platforms:
+    - "Darwin"
+hushlogin:
+  repo: "dotfiles/.hushlogin"
+  target: "~/.hushlogin"
+  platforms:
+    - "Darwin"
+    - "Linux"
+inputrc:
+  repo: "dotfiles/.inputrc"
+  target: "~/.inputrc"
+  platforms:
+    - "Darwin"
+fish_config:
+  repo: "dotfiles/config.fish"
+  target: "~/.config/fish/config.fish"
+  platforms:
+    - "Darwin"
+    - "Linux"
+starship:
+  repo: "dotfiles/starship.toml"
+  target: "~/.config/starship.toml"
+  platforms:
+    - "Darwin"
+    - "Linux"
+vscode_mac:
+  repo: "dotfiles/vscode.json"
+  target: "~/Library/Application Support/Code/User/settings.json"
+  platforms:
+    - "Darwin"
+vscode_linux:
+  repo: "dotfiles/vscode.json"
+  target: "~/. config/Code/User/settings.json"
+  platforms:
+    - "Linux"
