@@ -44,6 +44,6 @@ vscode_mac:
     - "Darwin"
 vscode_linux:
   repo: "dotfiles/vscode.json"
-  target: "~/. config/Code/User/settings.json"
+  target: "~/.config/Code/User/settings.json"
   platforms:
     - "Linux"

@@ -1,14 +1,13 @@
 """
 """
 import platform
-import pathlib
 from pathlib import Path
 import shutil
-import yaml
-import argparse
 
+import yaml
 import click
 
+# globals
 OS = platform.system()
 HERE = Path(__file__).resolve().parent
 with open("dotfiles.yaml") as fl:
@@ -26,7 +25,7 @@ def git_to_computer(repo_file: Path, target_file: Path) -> None:
             print(f"skipping {repo_file}")
             return
 
-    shutil.copy(fl, target_file)
+    shutil.copy(repo_file, target_file)
 
 
 def computer_to_git(repo_file: Path, target_file: Path) -> None:
@@ -35,7 +34,12 @@ def computer_to_git(repo_file: Path, target_file: Path) -> None:
     shutil.copy(target_file, repo_file)
 
 
-def sync(direction: str = "down"):
+@click.command()
+@click.argument(
+    "direction",
+    type=click.Choice(["from_git", "to_git"], case_sensitive=False)
+)
+def sync(direction):
     """
     """
     for _, v in DFLS.items():
@@ -43,29 +47,11 @@ def sync(direction: str = "down"):
             repo_path = HERE.joinpath(Path(v["repo"]).expanduser())
             target_path = Path(v["target"]).expanduser()
 
-            if direction == "down":
+            if direction == "from_git":
                 git_to_computer(repo_path, target_path)
-            elif direction == "up":
+            elif direction == "to_git":
                 computer_to_git(repo_path, target_path)
-            else:
-                raise ValueError()
 
 
 if __name__ == "__main__":
-    sync("up")
-
-# @click.command()
-# @click.argument(
-#     'mode',
-#     type=click.Choice(['from_git', 'to_git'], case_sensitive=False)
-# )
-# @click.option(
-#     '--files', '-f', multiple=True,
-#     type=click.Path(exists=True),
-#     default = [os.path.expanduser('~/.config/starship.toml')]
-# )
-# def main(mode, files):
-#     print(files)
-
-# if __name__ == "__main__":
-#     main()
+    sync()
