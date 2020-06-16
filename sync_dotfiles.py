@@ -18,7 +18,7 @@ def git_to_computer(repo_file: Path, target_file: Path) -> None:
     """
     """
     if repo_file.is_file():
-        ans = input(f"file {repo_file} exists, overwrite (y/n)?")
+        ans = input(f"file {repo_file} exists, overwrite (y/n)? ")
         if ans not in ("y", "n"):
             raise ValueError('plz specify "y" or "n"')
         elif ans == "n":
