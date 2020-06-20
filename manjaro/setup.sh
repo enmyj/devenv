@@ -3,7 +3,7 @@ pamac install \
     git \
     fish \
     htop \
-    vim \
+    vim
 
 # install starship
 curl -fsSL https://starship.rs/install.sh | bash
@@ -11,14 +11,12 @@ curl -fsSL https://starship.rs/install.sh | bash
 # switch to fish shell
 chsh -s /usr/bin/fish $USER
 
-# copy dotfiles
-cp ../dotfiles/.vimrc ~/.vimrc
-cp ../dotfiles/starship.toml ~/.config/starship.toml
-cp ../dotfiles/config.fish ~/.config/fish/config.fish
-touch ~/.hushlogin
-
 # install vscode
 sudo snap install code --classic
+
+# copy dotfiles
+pip3 install pyyaml click
+python3 sync_dotfiles.py from_git
 
 # install TOR Browser
 # download from website and unzip
