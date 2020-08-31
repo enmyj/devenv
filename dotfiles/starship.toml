@@ -1,7 +1,7 @@
 add_newline=false
 
 [character]
-symbol = "🌮"
+symbol = "🍕"
 
 [directory]
 truncation_length=3
@@ -20,10 +20,13 @@ disabled = true
 disabled = true
 
 [conda]
-disabled = true
+disabled = false
 
 [docker_context]
 disabled = false
 
 [aws]
 disabled=true
+
+[java]
+disabled = true

@@ -15,7 +15,7 @@
     },
     "editor.minimap.enabled": false,
     "yaml.schemas": {
-        "file:///Users/imyjer/.vscode/extensions/atlassian.atlascode-2.6.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///Users/imyjer/.vscode/extensions/atlassian.atlascode-2.6.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "rewrap.autoWrap.enabled": true,
     "rewrap.wrappingColumn": 88,
@@ -27,5 +27,13 @@
     "docker.explorerRefreshInterval": 3000,
     "python.formatting.provider": "black",
     "terminal.integrated.inheritEnv": false,
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "atlascode.jira.lastCreateSiteAndProject": {
+        "siteId": "",
+        "projectKey": ""
+    },
+    "explorer.confirmDragAndDrop": false,
+    "python.linting.flake8Args": [
+        "\"--max-line-length=88\""
+    ]
 }
