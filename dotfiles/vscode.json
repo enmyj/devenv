@@ -1,39 +1,49 @@
 {
+    "breadcrumbs.enabled": true,
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 14,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        88
+    ],
+    "editor.formatOnSave": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.sideBar.location": "left",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter-notebook",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "git.autofetch": true,
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-    "terminal.integrated.fontFamily": "Go Mono for Powerline",
-    "editor.fontSize": 14,
-    "kite.showWelcomeNotificationOnStartup": false,
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.fontSize": 14,
     "remote.SSH.connectTimeout": 45,
     "remote.SSH.useLocalServer": false,
-    "remote.SSH.remotePlatform": {
-        "sleepy-bot": "linux",
-        "10.0.0.200": "linux"
-    },
-    "editor.minimap.enabled": false,
-    "yaml.schemas": {
-        "file:///Users/imyjer/.vscode/extensions/atlassian.atlascode-2.6.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-    },
+    "docker.explorerRefreshInterval": 3000,
+    "vsicons.dontShowNewVersionMessage": true,
     "rewrap.autoWrap.enabled": true,
     "rewrap.wrappingColumn": 88,
-    "window.zoomLevel": 0,
-    "editor.rulers": [
-    88
-    ],
-    "editor.renderWhitespace": "all",
-    "docker.explorerRefreshInterval": 3000,
+    "markdownFormatter.enable": false,
+    "python.insidersChannel": "weekly",
     "python.formatting.provider": "black",
-    "terminal.integrated.inheritEnv": false,
-    "breadcrumbs.enabled": true,
-    "atlascode.jira.lastCreateSiteAndProject": {
-        "siteId": "",
-        "projectKey": ""
-    },
-    "explorer.confirmDragAndDrop": false,
+    "python.formatting.blackArgs": [
+        "--line-length=88"
+    ],
+    "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": [
-        "\"--max-line-length=88\""
-    ]
+        "--max-line-length=88"
+    ],
+    "jupyter.alwaysTrustNotebooks": true,
+    "jupyter.insidersChannel": "weekly",
+    "jupyter.askForKernelRestart": false,
+    "python.languageServer": "Pylance",
+    "workbench.colorTheme": "GitHub Dark"
 }
