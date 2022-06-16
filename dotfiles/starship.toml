@@ -1,7 +1,12 @@
 add_newline=false
 
+[shell]
+fish_indicator = "🐟"
+zsh_indicator = "zz"
+disabled = true
+
 [character]
-symbol = "🍕"
+success_symbol = "🌯"
 
 [directory]
 truncation_length=3
@@ -20,10 +25,12 @@ disabled = true
 disabled = true
 
 [conda]
+ignore_base = false
+format = "[$symbol$environment](dimmed green) "
 disabled = false
 
 [docker_context]
-disabled = false
+disabled = true
 
 [aws]
 disabled=true
