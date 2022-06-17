@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "c34e580cae7b6514219c99807fe5efee220bc801"
+        "revision": "f62ff3a5b4dbd5b4293acb990a328b113e9eca04"
       },
       "homebrew/bundle": {
         "revision": "5e7826f5b7f075478796081cd33a247f44882c5c"
@@ -11,7 +11,7 @@
         "revision": "9a642acfa92fddc1496c43181636b779e429ede2"
       },
       "homebrew/core": {
-        "revision": "d6384e413b6ecca857a41cb9b05d3cc74d727fc1"
+        "revision": "26dcd1c32b4c63be0d8fd24c22586c01e421cb55"
       },
       "homebrew/services": {
         "revision": "1e53e30909247f6465d3fadbbe414f75455c8b10"
@@ -898,6 +898,20 @@
             }
           }
         }
+      },
+      "pyenv-virtualenv": {
+        "version": "1.1.5",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "all": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/pyenv-virtualenv/blobs/sha256:0e3bfba31c3d4bc538ff156e225ca3dbb1fd15e27cd8fd5885706eb0efdb4405",
+              "sha256": "0e3bfba31c3d4bc538ff156e225ca3dbb1fd15e27cd8fd5885706eb0efdb4405"
+            }
+          }
+        }
       }
     }
   },
@@ -906,7 +920,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.2",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "d6384e413b6ecca857a41cb9b05d3cc74d727fc1",
+        "Homebrew/homebrew-core": "26dcd1c32b4c63be0d8fd24c22586c01e421cb55",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4",
         "macOS": "12.4"
