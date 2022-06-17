@@ -2,17 +2,17 @@
 set -e
 set -o pipefail
 
-# "Automated Mac Setup Script"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+cd $SCRIPT_DIR
+cd ../
 
 # copy dotfiles to appropriate places (and create any necessary directories)
-cat mac/dotfiles/.hushlogin >> ~/.hushlogin
-cat mac/dotfiles/.vimrc >> ~/.vimrc
-cat mac/dotfiles/.bash_profile >> ~/.bash_profile
-cat mac/dotfiles/.inputrc >> ~/.inputrc
-cat mac/dotfiles/.brewfile >> ~/.brewfile
-mkdir -p ~/.ssh/ && cat mac/dotfiles/.ssh_config >> ~/.ssh/config
-mkdir -p ~/.config/fish/ && cat mac/dotfiles/config.fish >> ~/.config/fish/config.fish
-cat mac/dotfiles/starship.toml >> ~/.config/starship.toml
+cat dotfiles/.hushlogin >> ~/.hushlogin
+cat dotfiles/.vimrc >> ~/.vimrc
+cat dotfiles/.bash_profile >> ~/.bash_profile
+cat dotfiles/.zshrc >> ~/.zshrc
+cat dotfiles/starship.toml >> ~/.config/starship.toml
+mkdir -p ~/.ssh/ && cat dotfiles/.ssh_config >> ~/.ssh/config
 
 # Install homebrew if not already installed
 if [[ $(which brew) ]]; then 
@@ -22,22 +22,7 @@ else
 fi;
 
 # brew install things specified in the Brewfile
-brew bundle --file=~/.brewfile
+brew bundle --file=./dotfiles/Brewfile
 
 # source the bash profile, just for fun
-source ~/.bash_profile
-
-# switch to fish shell as default
-echo $(which fish) >> /etc/shells
-chsh -s `which fish`
-
-# activate conda
-conda init fish
-conda init bash
-conda init zsh
-
-# turn off conda env thing
-conda config --set changeps1 False
-
-# install oh my fish
-# curl -L https://get.oh-my.fish | fish
+source ~/.zshrc

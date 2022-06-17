@@ -1,4 +1,5 @@
 add_newline=false
+command_timeout=1000
 
 [shell]
 fish_indicator = "🐟"
@@ -22,7 +23,8 @@ ssh_only = true
 disabled = true
 
 [python]
-disabled = true
+disabled = false
+pyenv_version_name = true
 
 [conda]
 ignore_base = false
