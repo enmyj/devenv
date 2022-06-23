@@ -80,11 +80,12 @@ alias ll="ls -lha"
 alias repos="cd ~/repos"
 
 export PYENV_ROOT="$HOME/.pyenv"
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(op completion zsh)"; compdef _op op
-export VIRTUAL_ENV_DISABLE_PROMPT=1
+eval $(thefuck --alias)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
